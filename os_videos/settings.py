@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'livereload',
     'django.contrib.staticfiles',
+    'os_videos_list',
 ]
 
 MIDDLEWARE = [
