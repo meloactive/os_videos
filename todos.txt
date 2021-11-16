@@ -1,0 +1,2 @@
+1. find all the files asynchronously and a text file create
+2. iterate through the folder and check for the files extension

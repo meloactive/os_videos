@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'livereload.middleware.LiveReloadScript',
+    # 'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'os_videos.urls'
@@ -115,6 +116,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"), # That's it!!
+    '/mnt/f/Video',
+    '/mnt/h', '/mnt/h/Big Booty Anal Babes 3 [2021]/Big Booty Anal Babes 3 [2021]', '/mnt/h/Tell Her [Deeper 2021] XXX WEB-DL SPLIT SCENES/Tell Her [Deeper 2021] XXX WEB-DL SPLIT SCENES', '/mnt/h/The Teenager Next Door Vol. 4 [Bang Bros Productions 2021] XXX WEB-DL SPLIT SCENES/The Teenager Next Door Vol. 4 [Bang Bros Productions 2021] XXX WEB-DL SPLIT SCENES'
+    
+)
 
 
 # Static files (CSS, JavaScript, Images)
