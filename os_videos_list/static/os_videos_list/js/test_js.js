@@ -27,3 +27,31 @@ function postAdd() {
 //    tag.appendChild(text);
 //    var element = document.getElementById("new");
 //    element.appendChild(tag);
+
+let intervalId; // define `count` globaly
+let timer = document.getElementById('timer')
+
+const timerStop = () => {
+  clearInterval(intervalId)
+}
+
+const timerRestart = () => {
+  timerStop()
+  timer.innerHTML = 100;
+}
+
+const timerStart = () => {
+  timerStop(); // Stop timer by security, e.g. if you call `timerStart()` multiple times
+  intervalId = setInterval(() => {
+    let timeLeft = timer.innerHTML;
+    if (+timeLeft > 0) {
+      timer.innerHTML = +timeLeft - 1
+      if(+timeLeft == 98){
+        clearInterval(intervalId)
+      }
+    } else {
+      timerRestart();
+      gameOverMessage()
+    }
+  }, 1000)
+}
