@@ -3,7 +3,29 @@ function getVersion() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById('demoGet').innerHTML = this.responseText;
-        console.log(this.responseText)
+        // window.addEventListener("load", function(){
+          res =JSON.parse(this.responseText)
+          arr = res["version"]
+          console.log(arr) 
+        for(i=0; i< arr.length; i++){
+
+          // alert(this.responseText[i])
+          var tag = document.createElement("p");
+          var text = document.createTextNode(arr[i]);
+          tag.appendChild(text);
+          var element = document.getElementById("new");
+          element.appendChild(tag);
+          // console.log(this.responseText[i])
+          // alert("from document")
+          var input = document.createElement("input");
+          input.type = "text";
+          input.name = "member";
+          element.appendChild(input);
+          element.appendChild(document.createElement("br"));
+          }
+          
+      // });
+        
       }
     };
     xhttp.open('GET', 'test_js', true);

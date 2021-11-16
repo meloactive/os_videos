@@ -104,7 +104,10 @@ def demo_view(request):
 
 # test js
 def test_js(request):
-    return JsonResponse({'version': '0.1.0-beta'})
+    arr = []
+    for i in range(10):
+        arr.append(i)
+    return JsonResponse({'version': arr})
 
 
 
