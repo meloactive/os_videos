@@ -3,6 +3,7 @@ from collections import OrderedDict
 # from collections import OrderedDict
 import os
 from django.conf import settings
+from django.http import JsonResponse
 
 
 # import win32api
@@ -99,3 +100,22 @@ def demo_view(request):
     # for i in range(10):
     #     test_arr.append(i)
     return render(request, 'os_videos_list/demo.html', {"lists": list(OrderedDict.fromkeys(videos))})
+
+
+# test js
+def test_js(request):
+    return JsonResponse({'version': '0.1.0-beta'})
+
+
+
+def post_add(request):
+    a = request.POST.get("a")
+    b = request.POST.get("b")
+
+    a = float(a)
+    b = float(b)
+    c = a + b
+    return JsonResponse({'result': c})
+
+def test_js_html(request):
+    return render(request, 'os_videos_list/test_js.html')

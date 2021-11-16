@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <body>
+        <h1>Using XMLHttpRequest Object and Django JsonResponse</h1>
+        <h2>GET Example</h2>
+
+        <p id="demoGet">Let AJAX change this text.</p>
+
+        <button type="button" onclick="getVersion()">Run GET</button>
+
+        <h2>POST Example</h2>
+
+        <p id="demoPost">Let AJAX change this text.</p>
+
+        <button type="button" onclick="postAdd()">Run POST</button>
+
+
+        <script src="{% static 'os_videos_list/js/test_js.js' %}">
+            
+        </script>
+
+    </body>
+</html>
