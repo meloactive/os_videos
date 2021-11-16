@@ -21,3 +21,9 @@ function postAdd() {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("a=1&b=2");
 }
+
+// var tag = document.createElement("p");
+//    var text = document.createTextNode("Tutorix is the best e-learning platform");
+//    tag.appendChild(text);
+//    var element = document.getElementById("new");
+//    element.appendChild(tag);

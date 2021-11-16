@@ -15,8 +15,30 @@
 
         <button type="button" onclick="postAdd()">Run POST</button>
 
+        <div id="new">
+
 
         <script src="{% static 'os_videos_list/js/test_js.js' %}">
+            
+        </script>
+        <script>
+            
+            document.addEventListener("DOMContentLoaded", function(){
+                var tag = document.createElement("p");
+                var text = document.createTextNode("Tutorix is the best e-learning platform");
+                tag.appendChild(text);
+                var element = document.getElementById("new");
+                element.appendChild(tag);
+                alert("from document")
+                
+            });
+            window.addEventListener("load", function(){
+                var tag = document.createElement("p");
+                var text = document.createTextNode("Tutorix is the best e-learning platform");
+                tag.appendChild(text);
+                var element = document.getElementById("new");
+                element.appendChild(tag);
+});
             
         </script>
 
